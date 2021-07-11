@@ -1,0 +1,180 @@
+body {
+  background: linear-gradient(270deg, #673399, #65ceaa, #ce65b8);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  margin: 20px 20px 20px 20px;
+  font-family: "Space Mono", monospace;
+  color: white;
+}
+
+header {
+  font-size: 40px;
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+  border: white solid;
+}
+
+main {
+  padding: 60px 20px 20px 20px;
+  margin: -80px 20px 20px 20px;
+  border: white solid;
+}
+
+.foto {
+  margin: 20px 20px 20px 1000px;
+}
+
+.foto-profile {
+  width: 200px;
+  box-shadow: 12px 12px 1px 1px rgba(2, 255, 150, 0.822);
+}
+
+.foto-profile:hover {
+  box-shadow: 8px 8px 1px 1px rgba(2, 255, 150, 0.822);
+}
+
+.quote {
+  font-size: 20px;
+  font-weight: bold;
+  margin: -250px 20px 100px 100px;
+}
+
+footer {
+  margin: 0px 0px 20px 20px;
+  width: 85%;
+}
+
+.social-links {
+  display: inline-block;
+  border: white solid;
+  background-color: whitesmoke;
+  box-shadow: 12px 12px 1px 1px rgba(2, 255, 150, 0.822);
+  margin: 2px auto;
+  padding: 10px;
+}
+
+.social-links:hover {
+  box-shadow: 8px 8px 1px 1px rgba(2, 255, 150, 0.822);
+}
+
+.linkedin {
+  width: 49px;
+}
+.github {
+  width: 42px;
+}
+.twitter {
+  width: 41px;
+}
+.email {
+  width: 55px;
+}
+
+.under {
+  background-image: linear-gradient(120deg, #0bb999 0%, #00ffd0 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.under:hover {
+  background-size: 100% 88%;
+}
+
+@media (max-width: 1125px) {
+  body {
+    margin: 20px 20px auto;
+  }
+
+  header {
+    font-size: 30px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    border: white solid;
+  }
+
+  main {
+    padding: 60px 20px auto;
+    margin: -60px 20px auto;
+    border: white solid;
+  }
+
+  .foto {
+    margin: 20px 20px auto;
+    display: block;
+    width: 100%;
+  }
+
+  .quote {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 20px auto;
+  }
+
+  .linkedin {
+    width: 29px;
+  }
+  .github {
+    width: 25px;
+  }
+  .twitter {
+    width: 25px;
+  }
+  .email {
+    width: 33px;
+  }
+}
