@@ -15,8 +15,26 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <a class="toggler-navbar">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+    </nav>
+    <div class="sidebar">
+        <ul class="sidebar__link">
+            <li><a href="#aboutme"><span class="under">About Me</span></a></li>
+            <li><a href="#myproject"><span class="under">My Project</span></a></li>
+            <li><a href="#cert"><span class="under">Certification</span></a></li>
+            <li><a href="#exp"><span class="under">Experience</span></a></li>
+            <li><a href="#followme"><span class="under">Follow Me</span></a></li>
+        </ul>
+    </div>
     <header>
-        <h1 class="header-quote"><span class="under">Hello right</span><span class="under"> there ! I'm</span> <span
+        <h1 class="header-quote"><span class="under">Hello right</span><span class="under"> there !<br> I'm</span> <span
                 class="under">Ragil</span>
         </h1>
     </header>
@@ -24,7 +42,9 @@
         <section class="foto">
             <img class="foto-profile" src="./assets/images/ragil.JPG" alt="foto_ragil">
         </section>
-        <section class="quote">
+        <section class="quote" id="aboutme">
+            <h1 class="quote__h1"><span class="under">About Me</span></h1>
+            <p>My name is Ragillio Aji, i'm a <span class="under">Mediocre</span> Web Developer</p>
             <p>Born to Earth-616 at <span class="under">Banyumas</span>, Centre Of Java, Indonesia</p>
             <p>11th of April <span class="under">1999</span> (i can call myself 90s gen, right?)</p>
             <p>Graduated in 2021, <span class="under">School of Computer Science</span></p>
@@ -34,22 +54,120 @@
             </p>
             <p>Feel free to <span class="under">contact</span> me, xoxo</p>
         </section>
-    </main>
-    <footer>
-        <a href="https://www.linkedin.com/in/ragillio-aji-ab110a145/" target="_blank">
-            <div class="social-links"><img class="linkedin" src="./assets/images/linkedin.png" alt="linkedin_link">
+        <section class="space"></section>
+        <section class="myproject" id="myproject">
+            <h1><span class="under">My Project</span></h1>
+            <div class="theproject">
+                <div class="picture">
+                    <img class="picture__program" src="./assets/images/backend_proj.gif" alt="screenshot program">
+                </div>
+                <div class="description">
+                    <h2>OpenMusic API</h2>
+                    <ul type="square">
+                        <li>Built with Hapi Js, PostgreSQL, Redis, RabbitMQ</li>
+                        <li>
+                            <p>A web API which you can do some CRUD operations on music stuff, like adding a song, look
+                                some playlists, etc. I built this after i've learnt it from <span class="under"><a
+                                        href="https://www.dicoding.com/" target="_blank">Dicoding</a></span></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div class="theproject">
+                <div class="picture">
+                    <img class="picture__program" src="./assets/images/laravel_proj.gif" alt="screenshot program">
+                </div>
+                <div class="description">
+                    <h2>Rent a Villa Website</h2>
+                    <ul type="square">
+                        <li>Built with Laravel 7 (frontend & backend) and MySQL/MariaDB</li>
+                        <li>
+                            <p>This project is a part of my final test for achieving my Bachelor's Degree at University.
+                                Rent a Villa Website provides solution for booking villa or any else at CV. Griya Asri
+                                (one of
+                                accomodation company at Depok, Indonesia), which customers can book a villa or any else
+                                from home
+                                with their gadget or laptop</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="theproject">
+                <div class="picture">
+                    <img class="picture__program" src="./assets/images/react_proj.gif" alt="screenshot program">
+                </div>
+                <div class="description">
+                    <h2>YourNotes App</h2>
+                    <ul type="square">
+                        <li>Built with M.E.R.N. stack (Mongo DB, Express js, React, Node js)</li>
+                        <li>
+                            <p>YourNotes is a React App. In this app you can add, edit, and delete notes (ordinary CRUD
+                                app). There also has an authentication and authorization method. This app is still under
+                                development, so many things i wanna add to this app like adding images to note or
+                                something</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h4 style="text-align: center;">There are more at my <span class="under"><a
+                        href="#followme">Github</a></span></h4>
+        </section>
+        <section class="space2"></section>
+        <section class="cerf" id="cert">
+            <h1><span class="under">Certification</span></h1>
+            <div class="cerf__pic">
+                <div class="pic__cerf">
+                    <img class="picture__program" id="cerf_pic1" src="./assets/images/backend.jpg" alt="backend">
+                </div>
+                <div class="pic__cerf">
+                    <img class="picture__program" id="cerf_pic2" src="./assets/images/aws.jpg" alt="aws">
+                </div>
+                <div class="pic__cerf">
+                    <img class="picture__program" id="cerf_pic3" src="./assets/images/frontend.jpg" alt="frontend">
+                </div>
+                <div class="pic__cerf">
+                    <img class="picture__program" id="cerf_pic4" src="./assets/images/pwa.jpg" alt="pwa">
+                </div>
+            </div>
+            <h4 style="text-align: center;">For more, checkout at my <span class="under"><a
+                        href="#followme">Linkedin</a></span></h4>
+        </section>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+        <section class="space2"></section>
+        <section class="exp" id="exp">
+            <h1><span class="under">Experience</span></h1>
+            <div class="exp__list">
+                <ul type="square">
+                    <li>Fasilitator Indosat Ooredoo Digital Camp (2020)</li>
+                    <li>Web Developer di SMK Muhammadiyah 7 Tebet Jakarta (2021)</li>
+                    <li>Web Developer di CV. Griya Asri Depok Jawa Barat (2021)</li>
+                    <li>Treasurer at Student's Club High School (2017)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="followme">
+        <h1><span class="under">Follow Me!</span></h1>
+        <a href="https://www.linkedin.com/in/ragillio-aji-ab110a145/" target="_blank">
+            <img class="social__icon" src="./assets/images/icons8-linkedin-30 (1).png" alt="linkedin_link">
         </a>
         <a href="https://github.com/ragil132" target="_blank">
-            <div class="social-links"><img class="github" src="./assets/images/github.png" alt="github_link"></div>
+            <img class="social__icon" src="./assets/images/icons8-github-30.png" alt="github_link">
         </a>
         <a href="mailto:lioajiragil@gmail.com" target="_blank">
-            <div class="social-links"><img class="email" src="./assets/images/gmail.png" alt="email_link"></div>
+            <img class="social__icon" src="./assets/images/icons8-gmail-32.png" alt="email_link">
         </a>
         <a href="https://twitter.com/aji_ragillio" target="_blank">
-            <div class="social-links"><img class="twitter" src="./assets/images/twitter.png" alt="twitter_link"></div>
+            <img class="social__icon" src="./assets/images/icons8-twitter-30 (1).png" alt="twitter_link">
         </a>
+        <br>
+        <p>Made with &#10084; by Ragillio Aji &copy; 2021</p>
+        <p>Icons by <a href="https://icons8.com" target="_blank">Icons8</a></p>
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

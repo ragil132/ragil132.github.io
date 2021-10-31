@@ -61,20 +61,126 @@ body {
 
 header {
   font-size: 40px;
-  margin: 0 auto;
+  margin: 0 auto 0 150px;
   width: 50%;
   padding: 20px;
   border: white solid;
 }
 
+.navbar {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  text-align: left;
+  font-size: 20px;
+  transform: rotate3d(0, 1, 0, 90deg);
+  transform-origin: left center;
+  transition: 0.5s;
+}
+
+.sidebar.open {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 2.5px;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 21px;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+  top: 15px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  top: 14px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 main {
-  padding: 60px 20px 20px 20px;
-  margin: -80px 20px 20px 20px;
-  border: white solid;
+  padding: 0;
+  margin: 0;
 }
 
 .foto {
-  margin: 20px 20px 20px 1000px;
+  margin: 150px 20px 20px 1000px;
 }
 
 .foto-profile {
@@ -89,38 +195,149 @@ main {
 .quote {
   font-size: 20px;
   font-weight: bold;
-  margin: -250px 20px 100px 100px;
-}
-
-footer {
-  margin: 0px 0px 20px 20px;
-  width: 85%;
-}
-
-.social-links {
-  display: inline-block;
+  padding: 80px 20px 50px 50px;
+  margin: -450px 20px 20px 20px;
   border: white solid;
-  background-color: whitesmoke;
-  box-shadow: 12px 12px 1px 1px rgba(2, 255, 150, 0.822);
-  margin: 2px auto;
-  padding: 10px;
 }
 
-.social-links:hover {
+.space {
+  margin: -50px 150px 20px 150px;
+  padding: 50px;
+  border: white solid;
+}
+
+.space2 {
+  margin: -90px 150px 20px 150px;
+  padding: 50px;
+  border: white solid;
+}
+
+.cerf,
+.exp {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 80px 20px 20px 50px;
+  margin: -50px 20px 20px 20px;
+  border: white solid;
+}
+
+.cerf {
+  padding: 80px 20px 20px 50px;
+  margin: -50px 20px 50px 20px;
+}
+
+.myproject {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 80px 20px 50px 50px;
+  margin: -50px 20px 60px 20px;
+  border: white solid;
+}
+
+.theproject,
+.cerf__pic {
+  overflow: auto;
+}
+
+.picture {
+  float: left;
+  margin: 30px 60px 30px 0px;
+}
+
+.pic__cerf {
+  float: left;
+  margin: 30px 30px 30px 100px;
+}
+
+.picture__program {
+  width: 400px;
+  box-shadow: 12px 12px 1px 1px rgba(2, 255, 150, 0.822);
+}
+
+.picture__program:hover {
   box-shadow: 8px 8px 1px 1px rgba(2, 255, 150, 0.822);
 }
 
-.linkedin {
-  width: 49px;
+/* Style the Image Used to Trigger the Modal */
+#cerf_pic1,
+#cerf_pic2,
+#cerf_pic3,
+#cerf_pic4 {
+  cursor: pointer;
 }
-.github {
-  width: 42px;
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
-.twitter {
-  width: 41px;
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
 }
-.email {
-  width: 55px;
+
+/* Add Animation - Zoom in the Modal */
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+footer {
+  text-align: center;
+  margin: -50px 150px 20px 150px;
+  padding: 80px 20px 20px 50px;
+  border: white solid;
+}
+
+.social__icon {
+  width: 30px !important;
 }
 
 .under {
@@ -134,47 +351,74 @@ footer {
   background-size: 100% 88%;
 }
 
-@media (max-width: 1125px) {
+@media only screen and (max-width: 900px) {
   body {
-    margin: 20px 20px auto;
+    margin: 20px 5px 20px 5px;
+  }
+
+  .myproject,
+  .cerf,
+  .exp {
+    padding: 80px 10px 50px 10px;
+    margin: -50px 5px 60px 5px;
+  }
+
+  .pic__cerf {
+    margin: 30px 10px 30px 10px;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    float: left;
   }
 
   header {
     font-size: 30px;
-    margin: 0 auto;
+    margin: 0 10px 40px 10px;
     width: 100%;
-    padding: 10px;
+    padding: 2px;
     border: white solid;
   }
 
-  main {
-    padding: 60px 20px auto;
-    margin: -60px 20px auto;
-    border: white solid;
+  .header-quote {
+    margin-left: 18px;
   }
 
   .foto {
-    margin: 20px 20px auto;
-    display: block;
-    width: 100%;
+    margin: 20px 20px 20px 60px;
   }
 
   .quote {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px 20px auto;
+    margin-top: -330px;
   }
 
-  .linkedin {
-    width: 29px;
+  .quote__h1 {
+    margin-top: 260px;
   }
-  .github {
-    width: 25px;
+
+  .picture__program {
+    width: 320px;
   }
-  .twitter {
-    width: 25px;
+
+  .space {
+    margin-top: -50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
-  .email {
-    width: 33px;
+
+  .space2 {
+    margin-top: -90px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  footer {
+    text-align: center;
+    margin: -90px 40px 20px 40px;
+    padding: 80px 20px 20px 20px;
+    border: white solid;
   }
 }
